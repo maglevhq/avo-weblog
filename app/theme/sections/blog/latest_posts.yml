@@ -1,0 +1,66 @@
+# Name of the section displayed in the editor UI
+name: "Latest posts"
+
+# Category of the section in the editor UI (headers, features, testimonials, ...etc)
+category: blog
+
+# A section might have the same content all over the site, like a menu or a footer for instance.
+# To enable this behavior, uncomment the following statement
+# site_scoped: true
+
+# Display or not the button to insert a new section after this one
+# insert_button: false
+
+# Insert this section at the top or the bottom of the page (default: nil)
+# insert_at: top 
+
+# One single instance per page?
+# singleton: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image, link, collection_item, checkbox, color and icon.
+# Please visit: https://docs.maglev.dev/concepts/setting for more explanation.
+settings:
+- label: "Number of posts"
+  id: number_of_posts
+  type: select
+  select_options:
+  - label: "Last 2 posts"
+    value: "2"
+  - label: "Last 4 posts"
+    value: "4"
+  - label: "Last 6 posts"
+    value: "6"
+  - label: "Last 8 posts"
+    value: "8"  
+  default: "2"
+- label: "Link to more posts"
+  id: more_link
+  type: link
+  with_text: true  
+  default: { text: "More posts", url: "#" }
+
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: []
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# By default, blocks are presented as a list in the editor UI. 
+# If you like to use blocks to build a menu with sub menu items, 
+# consider using the tree presentation
+# blocks_presentation: "tree"
+
+# In order to get a section with "meaning" content for the editors, 
+# you can set the default content of a new instance of this section.
+# (it's also be useful when taking a screenshot of the section).
+sample:
+  settings:
+    number_of_posts: "2"
+    more_link: 
+      text: "More posts"
+      url: "#"
+  blocks: []
+  

@@ -1,0 +1,26 @@
+<%= maglev_section.wrapper_tag.div class: 'py-6 md:py-12 px-6 md:px-0' do %>
+  <% post = maglev_section.settings.post.item %>
+  
+  <div class="w-full md:max-w-4xl mx-auto space-y-8">
+    <h2 class="uppercase font-bold text-xl">
+      <%= maglev_section.setting_tag :title %>
+    </h2>
+
+    <%= link_to main_app.post_path(post), class: 'block' do %>
+      <article class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
+        <div class="bg-gray-100 w-full md:w-72 md:min-w-[theme(spacing.72)] rounded-lg bg-transparent overflow-hidden relative">
+          <%= image_tag main_app.url_for(post.cover_photo), class: 'object-cover' %>
+        </div>
+        <div class="space-y-4">
+          <header class="space-y-1">
+            <p class="text-gray-400 text-xs uppercase"><%= l post.created_at.to_date, format: :long %></p>
+            <h2 class="text-gray-800 text-2xl font-semibold"><%= post.title %></h2>
+          </header>
+          <div class="text-md text-gray-700 leading-6">
+            <%= truncate(strip_tags(post.content.to_s), length: 140) %>
+          </div>
+        </div>
+      </article>
+    <% end if post %>
+  </div>
+<% end %>
