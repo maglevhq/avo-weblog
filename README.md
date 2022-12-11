@@ -12,7 +12,7 @@ bundle exec rails maglev:create_site
 bundle exec rails s
 ```
 
-Open your browser and hit the following url: [http://localhost:3000/avo].
+Open your browser and hit the following url: [http://localhost:3000/avo](http://localhost:3000/avo).
 
 You can now add some posts and create your home page with Maglev.
 
