@@ -4,7 +4,7 @@ Check out the guide here: [https://docs.maglev.dev/integrations/avo](https://doc
 
 ## Installation
 
-```ruby
+```bash
 bundle
 bundle exec rails db:create
 bundle exec rails db:migrate
