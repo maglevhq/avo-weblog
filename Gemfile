@@ -76,4 +76,4 @@ end
 
 gem "avo"
 
-gem 'maglevcms', path: '/Users/didier/Documents/NoCoffee/Maglev/maglev-mit' #'~> 1.1.3'
+gem 'maglevcms', '~> 1.1.7'
