@@ -5,12 +5,13 @@ Check out the guide here: [https://docs.maglev.dev/integrations/avo](https://doc
 ## Installation
 
 ```bash
-yarn install
 bundle install
 bundle exec rails db:create
 bundle exec rails db:migrate
+bundle exec rails maglev:vite:install_dependencies
 bundle exec rails maglev:create_site
-bundle exec rails s
+yarn install
+bin/dev
 ```
 
 Open your browser and hit the following url: [http://localhost:3000/avo](http://localhost:3000/avo).
