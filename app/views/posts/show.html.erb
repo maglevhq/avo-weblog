@@ -7,7 +7,7 @@
       <p class="text-gray-400 text-xs uppercase"><%= l @post.created_at.to_date, format: :long %></p>
     </div>
 
-    <%= image_tag main_app.url_for(@post.cover_photo), class: 'object-cover mx-auto' %>
+    <%= image_tag main_app.url_for(@post.cover_photo), class: 'object-cover mx-auto' if @post.cover_photo.persisted? %>
     
     <article class="prose lg:prose-lg max-w-full">
       <%= @post.content %>

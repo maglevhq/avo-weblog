@@ -5,7 +5,7 @@
         <%= link_to main_app.post_path(post), class: 'block group' do %>
           <article class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
             <div class="bg-gray-100 w-full md:w-32 md:min-w-[theme(spacing.32)] rounded-lg bg-transparent overflow-hidden relative">
-              <%= image_tag main_app.url_for(post.cover_photo), class: 'object-cover' %>
+              <%= image_tag main_app.url_for(post.cover_photo), class: 'object-cover' if post.cover_photo.persisted? %>
             </div>
             <header class="space-y-1">
               <p class="text-gray-400 text-xs uppercase"><%= l post.created_at.to_date, format: :long %></p>
